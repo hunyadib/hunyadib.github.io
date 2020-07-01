@@ -1,0 +1,169 @@
+/* Font family
+
+font-family: "Balsamiq Sans", cursive;
+font-family: "Open Sans", sans-serif;
+font-family: "Roboto", sans-serif;
+
+*/
+html {
+  background-color: #ffd900;
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: "Roboto", sans-serif;
+  width: 1200px;
+  padding: 50px;
+  margin: 20px auto;
+}
+
+h2,
+h3 {
+  font-family: "Open Sans", sans-serif;
+  color: brown;
+}
+
+section > h2 {
+  text-transform: uppercase;
+}
+
+header {
+  height: 150px;
+  margin-bottom: 20px;
+  background-image: url("../img/header-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+header > h1 {
+  text-align: center;
+  margin: 0;
+  padding-top: 35px;
+  color: khaki;
+  font-size: 68px;
+  text-shadow: 2px 3px 2px black;
+}
+
+nav {
+  text-align: center;
+  line-height: 42px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+  text-align: center;
+  width: 24%;
+  background-color: brown;
+  border-radius: 5px;
+}
+
+nav a,
+nav a:hover,
+nav a:visited {
+  text-decoration: none;
+  display: block;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 10px;
+  /*padding: 0 50px;*/
+}
+
+nav a:hover {
+  background-color: khaki;
+  color: green;
+}
+
+table.carte {
+  margin: 50px auto;
+  width: 100%;
+  background:  #f0e68c91;
+  border-collapse: collapse;
+  line-height: 25px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.carte tr:nth-child(even) {
+  background-color: #e0ae3975;
+}
+
+.carte th {
+  font-family: "Balsamiq Sans", cursive;
+  color: green;
+  font-size: 30px;
+  font-style: italic;
+  letter-spacing: 5px;
+  background: whitesmoke;
+}
+
+.carte td:last-child {
+  text-align: right;
+  padding-right: 100px;
+}
+
+.hamburger_icon::before,
+.hamburger_icon::after {
+  background-image: url(../img/iconfinder_Burger_5727006.png);
+  background-size: 36px 36px;
+  width: 36px;
+  height: 36px;
+  content: "";
+}
+
+.sideDish_icon::before,
+.sideDish_icon::after {
+  background-image: url(../img/iconfinder_French_fries_5727013.png);
+  background-size: 36px 36px;
+  width: 36px;
+  height: 36px;
+  content: "";
+}
+
+.drink_icon::before,
+.drink_icon::after {
+  background-image: url(../img/iconfinder_Soda_5727022.png);
+  background-size: 36px 36px;
+  width: 36px;
+  height: 36px;
+  content: "";
+}
+
+.hamburger_icon::before,
+.sideDish_icon::before,
+.drink_icon::before {
+  float: left;
+
+}
+
+.hamburger_icon::after,
+.sideDish_icon::after,
+.drink_icon::after {
+  float: right;
+}
+
+.card {
+  background-color: #f0e68c91;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin: 30px;
+  box-shadow: 6px 7px 5px grey;
+  display: inline-flex;
+}
+
+.card div:first-child {
+  width: 80%;
+  margin: 20px;
+}
+
+.card img {
+  margin: 10px;
+  border-radius: 3px;
+}

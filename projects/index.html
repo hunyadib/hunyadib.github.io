@@ -4,35 +4,69 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Elérhetőség | Csak 1 Burger</title>
+    <title>Elérhetőség | Csak 1Burger</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&family=Open+Sans&family=Roboto:wght@300&display=swap');
+    </style>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 
 <body>
-
-    <head>
-        <h1>Csak 1 Burger</h1>
-        <h2>Elérhetőségeink</h2>
-    </head>
+    <header>
+        <h1>Csak 1Burger</h1>
+    </header>
     <nav>
         <ul>
             <li><a href="index.html" title="Elérhetőségeink">Elérhetőség</a></li>
             <li><a href="etlap.html" title="Étlapunk">Étlap</a></li>
             <li><a href="akciok.html" title="Aktuális akcióink">Akciók</a></li>
+            <!-- <li><a href="rendeles.html" title="Online rendelés">Rendelés</a></li> -->
         </ul>
     </nav>
     <section>
+        <h2>Elérhetőségeink</h2>
         <article class="intro">
             <h3>Címünk</h3>
-            <p></p>
+            <p>1234 Budapest, Majom utca 3.</p>
             <h3>Telefonszám</h3>
-            <p></p>
+            <p>+36-1/123-4567</p>
             <h3>Nyitvatartás</h3>
             <table>
-                
+                <thead>
+                    <th></th>
+                    <th>Nyitás</th>
+                    <th>Zárás</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hétfő - Péntek</td>
+                        <td>10:00</td>
+                        <td>22:00</td>
+                    </tr>
+                    <tr>
+                        <td>Szombat</td>
+                        <td>11:00</td>
+                        <td>23:00</td>
+                    </tr>
+                    <tr>
+                        <td>Vasárnap</td>
+                        <td>12:00</td>
+                        <td>22:00</td>
+                    </tr>
+                </tbody>
             </table>
         </article>
         <article class="map">
-            <p>Megközelíthatőség</p>
+            <h3>Megközelítés</h3>
+            <h4>Tömegközlekedéssel:</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem nam unde libero minus, dolore nobis
+                obcaecati eligendi <a href="#">earum harum</a> maiores officiis error, corporis vero sequi quam ullam.
+                Tempora, aspernatur earum?</p>
+            <h4>Autóval:</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem nam unde libero minus, dolore nobis
+                obcaecati eligendi earum harum maiores officiis error, corporis vero sequi quam ullam. Tempora,
+                aspernatur earum?</p>
+            <img src="./img/burger-map.png" alt="Elérhetőség">
         </article>
     </section>
 </body>
