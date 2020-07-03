@@ -2,49 +2,164 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Rendelés | Csak 1Burger</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&family=Open+Sans&family=Roboto:wght@300&display=swap');
+        @import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&family=Open+Sans&family=Roboto:wght@300&display=swap");
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" type="text/css" href="./css/mystyle.css"> -->
+
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="./css/mystyle.css" /> -->
 </head>
 
 <body>
     <header>
         <h1>Csak 1Burger</h1>
     </header>
+
     <nav>
-        <ul class="nav justify-content-center">
-            <li><a href="index.html" title="Elérhetőségeink">Elérhetőség</a></li>
-            <li><a href="etlap.html" title="Étlapunk">Étlap</a></li>
-            <li><a href="akciok.html" title="Aktuális akcióink">Akciók</a></li>
-            <li><a href="rendeles.html" title="Online rendelés">Rendelés</a></li>
+        <ul>
+            <li>
+                <a class="nav-link" href="/index.html" title="Elérhetőségeink">Elérhetőség</a>
+            </li>
+            <li>
+                <a class="nav-link" href="/etlap.html" title="Étlapunk">Étlap</a>
+            </li>
+            <li>
+                <a class="nav-link" href="/akciok.html" title="Aktuális akcióink">Akciók</a>
+            </li>
+            <li>
+                <a class="nav-link" href="/rendeles.html" title="Online rendelés">Rendelés</a>
+            </li>
         </ul>
     </nav>
-
-    <section class="container">
+    <!-- <section>
         <h2>Rendelés</h2>
+    </section> -->
+    <section class="container">
         <div class="row justify-content-center">
-            <form action="#" class="col-md-6">
+            <form action="#" class="col-md-4">
                 <fieldset class="form-group">
-                    <label for="name">Név: </label>
-                    <input type="text" class="form-control" id="name" name="fname">
+                    <label for="name">Név: *</label>
+                    <input type="text" class="form-control" id="name" name="fname" placeholder="Vásárló neve"
+                        required />
                 </fieldset>
+
                 <fieldset class="form-group">
-                    <label for="email">E-mail cím: </label>
-                    <input type="email" class="form-control" id="email" name="femail">
+                    <label for="email">E-mail cím: *</label>
+                    <input type="email" class="form-control" id="email" name="femail" placeholder="Vásárló e-mail címe"
+                        required />
                 </fieldset>
-                <fieldset class="form group">
-                    <label for="szallcim">Szállítási cím: </label>
-                    <input type="text" class="form-control" id="szallcim" name="fszallcim">
+
+                <fieldset class="form-group">
+                    <label for="szallcim">Szállítási cím: *</label>
+                    <input type="text" class="form-control" id="szallcim" name="fszallcim"
+                        placeholder="Ahol az ételeket átveszik" required />
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <label for="megjegyzes">Megjegyzés:</label>
+                    <textarea class="form-control" id="megjegyzes" name="fmegjegyzes" rows="3"
+                        placeholder="Egyéb tudnivaló a kiszállításkor..."></textarea>
+                </fieldset>
+
+                <fieldset class="form-check" id="hamburger">
+                    <legend>Választható hamburgerek:</legend>
+                    <!-- <label for="feltet">Választható hamburgerek:</label> -->
+                    <div>
+                        <input class="form-check-input" type="radio" name="burgerRadios" id="simaBurger"
+                            value="simaBurger" checked />
+                        <label class="form-check-label" for="simaBurger">
+                            Sima hamburger
+                        </label>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="burgerRadios" id="sajtosBurger"
+                            value="sajtosBurger" />
+                        <label class="form-check-label" for="sajtosBurger">
+                            Sajtos hamburger
+                        </label>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="burgerRadios" id="hagymasBurger"
+                            value="hagymasBurger" />
+                        <label class="form-check-label" for="hagymasBurger">
+                            Hagymás hamburger
+                        </label>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="burgerRadios" id="sonkasBurger"
+                            value="sonkasBurger" />
+                        <label class="form-check-label" for="sonkasBurger">
+                            Sonkás hamburger
+                        </label>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="burgerRadios" id="vegyessBurger"
+                            value="vegyessBurger" />
+                        <label class="form-check-label" for="vegyessBurger">
+                            Vegyes hamburger
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-check" id="feltetek">
+                    <legend>Választható feltétek:</legend>
+                    <!-- <label for="feltetek">Választható feltétek:</label> -->
+                    <div>
+                        <input class="form-check-input" type="radio" name="feltetRadios" id="feltetNincs"
+                            value="feltetNincs" checked />
+                        <label class="form-check-label" for="feltetNincs">
+                            Nem kérek feltétet
+                        </label>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="feltetRadios" id="feltetSajt"
+                            value="feltetSajt" />
+                        <label class="form-check-label" for="feltetSajt">
+                            Sajt
+                        </label>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="feltetRadios" id="feltetHagyma"
+                            value="feltetHagyma" />
+                        <label class="form-check-label" for="feltetHagyma">
+                            Hagyma
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Választható szószok</legend>
+                    <select class="form-control" id="szoszok">
+                        <option>Nincs szósz</option>
+                        <option>Szósz - 1</option>
+                        <option>Szósz - 2</option>
+                        <option>Szósz - 3</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <label for="mennyiseg">Mennyiség: </label>
+                    <input type="number" id="mennyiseg" name="quantity" min="1" max="10" value="1"> db
+                    <label>
+                        <small class="form-text text-muted">1 - 10 között!</small>
+                    </label>                   
+                </fieldset>
+
+                <fieldset>
+                    A megrendelés összege: <span id="sum">258</span>.- Ft
+                    <button type="submit" class=" btn btn-primary">
+                        Megrendelem
+                    </button>
                 </fieldset>
             </form>
         </div>
     </section>
+
 
 </body>
 

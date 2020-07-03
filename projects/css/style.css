@@ -5,6 +5,10 @@ font-family: "Open Sans", sans-serif;
 font-family: "Roboto", sans-serif;
 
 */
+*, ::after, ::before {
+  box-sizing: content-box;
+}
+
 html {
   background-color: #ffd900;
 }
@@ -15,6 +19,22 @@ body {
   width: 1200px;
   padding: 50px;
   margin: 20px auto;
+}
+
+.container {
+  margin-top: 3rem
+}
+
+form {
+  color: green;
+}
+
+fieldset {
+  margin-top: 5px;
+}
+
+legend {
+  padding-top: 1rem;
 }
 
 h2,
@@ -62,6 +82,7 @@ nav li {
   width: 24%;
   background-color: brown;
   border-radius: 5px;
+  padding: 0;
 }
 
 nav a,
@@ -73,7 +94,11 @@ nav a:visited {
   font-weight: bold;
   font-size: 20px;
   letter-spacing: 10px;
-  /*padding: 0 50px;*/
+  padding: 0;
+}
+
+.nav-link {
+  padding: 0;
 }
 
 nav a:hover {
