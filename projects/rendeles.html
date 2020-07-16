@@ -41,7 +41,7 @@
     </section> -->
     <section class="container">
         <div class="row justify-content-center">
-            <form action="#" class="col-md-4">
+            <form action="" class="col-md-4">
                 <fieldset class="form-group">
                     <label for="name">Név: *</label>
                     <input type="text" class="form-control" id="name" name="fname" placeholder="Vásárló neve"
@@ -66,9 +66,11 @@
                         placeholder="Egyéb tudnivaló a kiszállításkor..."></textarea>
                 </fieldset>
 
-                <fieldset class="form-check" id="hamburger">
-                    <legend>Választható hamburgerek:</legend>
-                    <!-- <label for="feltet">Választható hamburgerek:</label> -->
+                <!-- nem kell burgert választani! -->
+                <!-- <fieldset class="form-check" id="hamburger">
+                    <legend>Választható hamburgerek:</legend> -->
+                <!-- <label for="feltet">Választható hamburgerek:</label> -->
+                <!-- <label>1.200.- Ft/db</label>
                     <div>
                         <input class="form-check-input" type="radio" name="burgerRadios" id="simaBurger"
                             value="simaBurger" checked />
@@ -104,55 +106,74 @@
                             Vegyes hamburger
                         </label>
                     </div>
-                </fieldset>
+                </fieldset> -->
 
-                <fieldset class="form-check" id="feltetek">
+                <fieldset class="form-check" id="feltetek" onChange="calcAmount()">
                     <legend>Választható feltétek:</legend>
-                    <!-- <label for="feltetek">Választható feltétek:</label> -->
                     <div>
-                        <input class="form-check-input" type="radio" name="feltetRadios" id="feltetNincs"
-                            value="feltetNincs" checked />
+                        <input class="form-check-input" type="radio" name="feltetRadios" id="feltetNincs" value="0"
+                            checked />
                         <label class="form-check-label" for="feltetNincs">
                             Nem kérek feltétet
                         </label>
                     </div>
                     <div>
-                        <input class="form-check-input" type="radio" name="feltetRadios" id="feltetSajt"
-                            value="feltetSajt" />
+                        <input class="form-check-input" type="radio" name="feltetRadios" id="feltetSajt" value="300" />
                         <label class="form-check-label" for="feltetSajt">
-                            Sajt
+                            Sajt (+300 Ft)
                         </label>
                     </div>
                     <div>
-                        <input class="form-check-input" type="radio" name="feltetRadios" id="feltetHagyma"
-                            value="feltetHagyma" />
-                        <label class="form-check-label" for="feltetHagyma">
-                            Hagyma
+                        <input class="form-check-input" type="radio" name="feltetRadios" id="feltetBacon" value="400" />
+                        <label class="form-check-label" for="feltetBacon">
+                            Bacon (+400 Ft)
+                        </label>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="feltetRadios" id="feltetDuplaHus"
+                            value="1000" />
+                        <label class="form-check-label" for="feltetDuplaHus">
+                            Dupla hús (+1000 Ft)
+                        </label>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="feltetRadios" id="feltetSajtEsBacon"
+                            value="700" />
+                        <label class="form-check-label" for="feltetSajtEsBacon">
+                            Sajt és bacon (+700 Ft)
+                        </label>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="feltetRadios" id="feltetSajtEsDuplaHus"
+                            value="1300" />
+                        <label class="form-check-label" for="feltetSajtEsDuplaHus">
+                            Sajt és dpla hús (+1300 Ft)
                         </label>
                     </div>
                 </fieldset>
 
                 <fieldset>
-                    <legend>Választható szószok</legend>
-                    <select class="form-control" id="szoszok">
-                        <option>Nincs szósz</option>
-                        <option>Szósz - 1</option>
-                        <option>Szósz - 2</option>
-                        <option>Szósz - 3</option>
+                    <legend>Választható szószok:</legend>
+                    <select class="form-control" id="szoszok" onChange="calcAmount()">
+                        <option value="0">Hagyományos</option>
+                        <option value="100">Csípős (+100 Ft)</option>
                     </select>
                 </fieldset>
 
                 <fieldset>
                     <label for="mennyiseg">Mennyiség: </label>
-                    <input type="number" id="mennyiseg" name="quantity" min="1" max="10" value="1"> db
+                    <input type="number" id="mennyiseg" name="famount" min="1" max="10" value="1"
+                        onChange="calcAmount()"> db
                     <label>
                         <small class="form-text text-muted">1 - 10 között!</small>
-                    </label>                   
+                    </label>
                 </fieldset>
 
                 <fieldset>
-                    A megrendelés összege: <span id="sum">258</span>.- Ft
-                    <button type="submit" class=" btn btn-primary">
+                    <label>
+                        A megrendelés összege: <span id="sumValue">1200</span>.- Ft
+                    </label>
+                    <button type="submit" class="btn btn-primary" onclick="checkInput()">
                         Megrendelem
                     </button>
                 </fieldset>
@@ -160,7 +181,7 @@
         </div>
     </section>
 
-
+    <script src="/js/main.js"></script>
 </body>
 
 </html>
