@@ -41,7 +41,7 @@
     </section> -->
     <section class="container">
         <div class="row justify-content-center">
-            <form action="" class="col-md-4">
+            <form action="" class="col-md-6">
                 <fieldset class="form-group">
                     <label for="name">Név: *</label>
                     <input type="text" class="form-control" id="name" name="fname" placeholder="Vásárló neve"
@@ -108,7 +108,7 @@
                     </div>
                 </fieldset> -->
 
-                <fieldset class="form-check" id="feltetek" onChange="calcAmount()">
+                <fieldset class="form-check" id="feltetek" onChange="calcHamburgerPrice()">
                     <legend>Választható feltétek:</legend>
                     <div>
                         <input class="form-check-input" type="radio" name="feltetRadios" id="feltetNincs" value="0"
@@ -154,7 +154,7 @@
 
                 <fieldset>
                     <legend>Választható szószok:</legend>
-                    <select class="form-control" id="szoszok" onChange="calcAmount()">
+                    <select class="form-control" id="szoszok" onChange="calcHamburgerPrice()">
                         <option value="0">Hagyományos</option>
                         <option value="100">Csípős (+100 Ft)</option>
                     </select>
@@ -163,7 +163,7 @@
                 <fieldset>
                     <label for="mennyiseg">Mennyiség: </label>
                     <input type="number" id="mennyiseg" name="famount" min="1" max="10" value="1"
-                        onChange="calcAmount()"> db
+                        onChange="calcHamburgerPrice()"> db
                     <label>
                         <small class="form-text text-muted">1 - 10 között!</small>
                     </label>
@@ -171,17 +171,18 @@
 
                 <fieldset>
                     <label>
-                        A megrendelés összege: <span id="sumValue">1200</span>.- Ft
+                        A megrendelés összege: <span id="sumValue">1700</span>.- Ft
                     </label>
-                    <button type="submit" class="btn btn-primary" onclick="checkInput()">
+                    <button type="submit" class="btn btn-primary" onclick="run()">
                         Megrendelem
                     </button>
                 </fieldset>
+                <label>5000 Ft alatti rendelés esetén, szállítási költséget számítunk fel</label>
             </form>
         </div>
     </section>
 
-    <script src="./js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

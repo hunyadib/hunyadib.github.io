@@ -1,16 +1,21 @@
-const hamburgerPrice = 1200;
+const HANBURGEPRICE = 1200;
+let name, email, address, comment;
+let extra, sauce, amount, price;
 
-function checkInput() {
-  let name = document.getElementById("name").value.trim();
-  let email = document.getElementById("email").value.trim();
-  let address = document.getElementById("szallcim").value.trim();
-  let comment = document.getElementById("megjegyzes").value.trim();
+function getFormData() {
+  name = document.getElementById("name").value.trim();
+  email = document.getElementById("email").value.trim();
+  address = document.getElementById("szallcim").value.trim();
+  comment = document.getElementById("megjegyzes").value.trim();
+
+  return isValidPersonalData(name, email, address, comment) ? true : false;
+
+}
+
+function isValidPersonalData(name, email, address, comment) {
   let message = '';
 
-
-  if (!name) {
-    message += 'Név megadása kötelező.\n';
-  }
+  if (!name) message += 'Név megadása kötelező.\n';
   if (!email || !(email.indexOf('@') > 0) || !(email.indexOf('.') > 0)) {
     message += 'Nem megfelelő email cím.\n';
   }
@@ -21,39 +26,45 @@ function checkInput() {
     message += 'Megjegyzésben nem megengedett a HTML használata.';
   }
 
-  if (message.length === 0) {
-    message = 'Minden rendben!';
-    //return true;
-  } else {
-    //return false;
+  if (message.length != 0) {
+    alert(message);
+    return false;
   }
-
-  alert(message);
-  //return false;
-
+  else return true;
 }
 
-function calcAmount() {
+function isValidQuantity(quantity) {
+  if (!quantity || quantity < 1 || quantity > 10) {
+    alert('1 és 10 közötti darab rendelhető!')
+    return false;
+  } else {
+    return true;
+  }
+}
 
-  let extra = parseInt(document.querySelector("input[name=feltetRadios]:checked").value);
-  let sauce = parseInt(document.getElementById("szoszok").value);
-  let amount = parseInt(document.querySelector("input[name='famount']").value);
+function priceCheck(amount, extra, sauce) {
+  if (isValidQuantity(amount)) {
+    let sum = amount * (HANBURGEPRICE + extra + sauce);
+    return (sum < 5000) ? sum += 500 : sum;
+  }
+}
+
+function calcHamburgerPrice() {
+  extra = parseInt(document.querySelector("input[name=feltetRadios]:checked").value);
+  sauce = parseInt(document.getElementById("szoszok").value);
+  amount = parseInt(document.querySelector("input[name='famount']").value);
   let sumValue = document.querySelector("#sumValue");
 
-  if (!amount || amount < 1 || amount > 10) {
-    alert('1 és 10 közötti darab rendelhető!');
-  } else {
-    let sum = amount * (hamburgerPrice + extra + sauce);
-    sumValue.innerHTML = sum;
+  if (isValidQuantity(amount)) {
+    price = priceCheck(amount, extra, sauce);
+    sumValue.innerHTML = price;
   }
-
-
-  /* console.log(`Extra: ${extra}`);
-  console.log(`szósz: ${sauce}`); */
-
 
 }
 
-function sendOrderData() {
-
+function run() {
+  if (getFormData()) {
+    alert(`Neved: ${name} \n Fizetendő: ${price}`);
+    
+  }
 }
