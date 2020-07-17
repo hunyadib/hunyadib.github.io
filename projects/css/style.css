@@ -59,10 +59,42 @@ header {
 header > h1 {
   text-align: center;
   margin: 0;
-  padding-top: 35px;
+  /*margin-top: -50px;*/
   color: khaki;
-  font-size: 68px;
+  font-size: 60px;
   text-shadow: 2px 3px 2px black;
+}
+
+.weather, .statistics {
+  display: flex;
+  /* background-color: hotpink; */
+  justify-content: space-between;
+}
+
+.weather {
+  margin-top: -60px;
+}
+
+.weather h5 {
+  /* text-align: center; */
+  padding-left: 15px;
+  padding-top: 10px;
+  color: khaki;
+  text-shadow: 2px 3px 2px black;
+  /* background-color: brown; */
+}
+
+.weather .btn {
+  color: brown;
+  background-color: khaki;
+}
+
+.weather div > p, .statistics .h5 {
+  color: khaki;
+  text-shadow: 2px 3px 2px black;
+  background-color: #a52a2aa6;
+  padding: 3px 15px;
+  border-radius: 5px;
 }
 
 nav {
