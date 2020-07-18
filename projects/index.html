@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
-<body onload="onLoadWeather(), displayStatistics()">
+<body onload="onLoadWeather()">
     <header>
         <h1>Csak 1Burger</h1>
         <div class="weather">
@@ -32,29 +32,35 @@
                             <option value="6">Vasárnap</option>
                         </select>
                     </div>
+                    <div>
+                        <input type="radio" id="Celsius" name="scale" value="C" checked>
+                        <label for="Celsius">&degC</label>
+                        <input type="radio" id="Fahren" name="scale" value="F">
+                        <label for="Fahren">&degF</label>
+                    </div>
                     <div class="col-auto">
                         <button class="btn" onclick="myWeather()">Mutasd</button>
                     </div>
                 </div>
             </div>
             <div class="text-right">
-                <h5><span id="temperature">-</span> &degC</h5>
+                <h5><span id="temperature">- &degC</span></h5>
                 <p><span id="offer"></span></p>
             </div>
         </div>
         <div class="statistics">
             <div>
-                <p class="h5">Minimum: <span id="minTempr">-</span> &degC</p>
+                <p class="h5">Minimum: <span id="minTempr">- &degC</span></p>
             </div>
             <div>
-                <p class="h5">Maximum: <span id="maxTempr">-</span> &degC</p>
+                <p class="h5">Maximum: <span id="maxTempr">- &degC</span></p>
             </div>
             <div>
-                <p class="h5">Átlag: <span id="averageTempr">-</span> &degC</p>
+                <p class="h5">Átlag: <span id="avgTempr">- &degC</span></p>
             </div>
-            
+
         </div>
-        
+
     </header>
     <nav>
         <ul>
